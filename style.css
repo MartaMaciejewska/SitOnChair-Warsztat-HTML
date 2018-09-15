@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    border: none;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway-regular-webfont.woff2') format('woff2'),
+    url('fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway-light-webfont.woff2') format('woff2'),
+    url('fonts/raleway-light-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway-bold-webfont.woff2') format('woff2'),
+    url('fonts/raleway-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family:'raleway', Arial, Tahoma, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1024px;
+}
+
+#main-header {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#main-header .container {
+    height: 41px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 14px;
+}
+
+#logo {
+    font-weight: 400;
+}
+.secondWord {
+    color: #27c7ab;
+    font-weight: 700;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu > li {
+    display: inline;
+    padding: 0 20px;
+    list-style: none;
+}
+
+#menu li:last-child {
+    padding-right: 0;
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu>li:first-child {
+    padding-right: 5px;
+    margin-right: 0;
+    text-align: center;
+    position: relative;
+}
+
+
+#menu>li:first-child:hover ul.company {
+    top: 22px;
+    right: 0;
+}
+
+ul.company {
+    display: block;
+    position: absolute;
+    top: -550px;
+    right: 0;
+    text-align: center;
+    list-style: none;
+    padding: 7px 10px;
+    background-color: black;
+    transition: 1s;
+    position: relative;
+}
+
+ul.company:before {
+    content: "";
+    height: 120px;
+    width: 100%;
+    top: -30px;
+    left: 0;
+    background-color: transparent;
+    z-index: 2;
+    position: absolute;
+}
+
+ul.company:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left:10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    left: 41px;
+
+}
+
+ul.company li {
+    color:white;
+    text-transform: none;
+    padding: 5px 3px;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#slider {
+    height:504px;
+    background:linear-gradient(white, lightgrey);
+}
+#sliderDiv {
+    position: relative;
+    padding-top: 80px;
+}
+.sliderButton {
+    color: #27c7ab;
+    border: none;
+    background-color: transparent;
+    font-size: 55px;
+}
+#sliderButtonLeft {
+    position: absolute;
+    top: 250px;
+    left:0;
+}
+
+#sliderButtonRight {
+    position: absolute;
+    top: 250px;
+    right:0;
+}
+#slider1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#slider1 img {
+    width: 80%;
+    height: 80%;
+}
+#mainText {
+    padding-right: 45px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    padding-top: 50px;
+}
+
+
+#mainText h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 42px;
+    font-weight: 400;
+}
+#mainText p {
+    padding: 15px;
+    padding-bottom: 30px;
+    line-height: 26px;
+    text-align: center;
+}
+.button {
+    background-color: #27c7ab;
+    color: white;
+    text-align:center;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-family: 'raleway', Arial, Tahoma, sans-serif;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#examples {
+    height:300px;
+}
+
+#examplesList {
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+#examplesList li:first-child {
+    background-image: url("images/box1_img.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+#examplesList li:nth-child(2){
+    background-image: url("images/box2_img.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+#examplesList li {
+    list-style: none;
+    margin-right: 20px;
+    border: 1px solid lightgrey;
+    width: 350px;
+    height: 224px;
+}
+
+#examplesList li:last-child{
+    margin-right: 0;
+}
+
+#examplesList li:first-child p, #examplesList li:nth-child(2) p {
+    position: absolute;
+    top: -1233px;
+    left:-1500px;
+}
+
+#examplesList li:first-child a, #examplesList li:nth-child(2) a{
+    color: black;
+}
+
+.exampleHeadline {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+    bottom: 15px;
+    display:flex;
+    align-items: center;
+    transition: 2s;
+
+}
+
+
+h2.smallerHeadline {
+    font-size: 18px;
+    position:relative;
+    margin-left:5px;
+    font-weight: 600;
+}
+
+h2.smallerHeadline:after{
+    content: "";
+    height: 8px;
+    width: 150px;
+    background-color: #27c7ab;
+    position: absolute;
+    bottom: -9px;
+    left:0;
+}
+
+#examplesList li:first-child:hover, #examplesList li:nth-child(2):hover{
+    background-image: none;
+}
+#examplesList li:first-child:hover .exampleHeadline, #examplesList li:nth-child(2):hover .exampleHeadline{
+    position: absolute;
+    top:0
+}
+
+#examplesList li:first-child:hover p, #examplesList li:nth-child(2):hover p{
+    position: absolute;
+    top: 55px;
+    left:0;
+}
+.inputs h2 {
+    padding-top:15px;
+}
+#examplesList p {
+    padding-top: 20px;
+    padding-left: 5px;
+    font-size:14px;
+    color: grey;
+}
+
+
+.biggerHeadline {
+    text-transform: uppercase;
+    position:relative;
+    padding-top: 20px;
+}
+.biggerHeadline:after{
+    content: "";
+    height: 8px;
+    width: 300px;
+    background-color: #27c7ab;
+    position: absolute;
+    bottom: -9px;
+    left:0;
+}
+
+#price {
+    background-color: lightgrey;
+    height: 700px;
+}
+
+#price a{
+    text-decoration: none;
+}
+#priceBoxes {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#priceBoxes li {
+    list-style: none;
+    display: inline-block;
+}
+
+.priceBox {
+    height: 500px;
+    width: 320px;
+    border: 1px solid darkgrey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ECF0F1;
+    position:relative;
+}
+.priceBox button {
+    position: absolute;
+    bottom: 20px;
+    left: 85px;
+}
+
+.priceBox:before {
+    content:"";
+    height:60px;
+    width:60px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid darkgrey;
+    position: absolute;
+    top: -35px;
+    left: 129px;
+}
+.priceBox:after {
+    content:"";
+    height:27px;
+    width:27px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    position: absolute;
+    top: -18px;
+    left: 146px;
+}
+
+.priceNumber {
+    width:145px;
+    height: 145px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px;
+    background-color: white;
+    color: darkgrey;
+    font-weight: 600;
+    font-size: 22px;
+
+}
+
+.priceNumber span:first-child {
+    font-size: 40px;
+}
+
+#priceBoxes .priceBox li {
+    display: block;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.planOptions {
+    width:100%;
+}
+
+.planOptions li{
+    text-align: center;
+    color: grey;
+}
+.planOptions li:nth-child(odd){
+    background-color: lightgrey;
+}
+
+.planOptions li:nth-child(even){
+    background-color: #e7e7e7;
+}
+
+h3 {
+    color: #27c7ab;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding-top: 30px;
+}
+
+#price a:hover .priceBox {
+    background-color: #27c7ab;
+}
+
+#price a:hover .priceBox:after{
+    background-color: white;
+}
+
+#price a:hover .priceBox:before{
+    background-color: #27c7ab;
+    border-color: #27c7ab;;
+}
+
+#price a:hover h3 {
+    color: white;
+}
+
+#price a:hover .priceNumber {
+    color:#27c7ab;
+    border-color: #27c7ab;;
+}
+
+#price a:hover button {
+    background-color: white;
+    color:#27c7ab;
+}
+
+#price a:hover .planOptions li:nth-child(odd){
+    background-color: white;
+}
+#contact {
+    height: 490px;
+}
+#form {
+    display:flex;
+    justify-content: space-between;
+}
+
+#mainForm {
+    padding-top: 50px;
+    width: 950px;
+}
+input {
+    display: block;
+    width: 90%;
+    margin-bottom: 15px;
+    font-size: 32px;
+    border: 1px solid #27c7ab;
+    line-height: 46px;
+    padding-left: 5px;
+    font-family: "raleway", Arial, Tahoma, sans-serif;
+}
+textarea {
+    height: 200px;
+    resize: none;
+    width: 90%;
+    font-size: 32px;
+    line-height: 46px;
+    border: 1px solid #27c7ab;
+    padding-left: 5px;
+    font-family: "raleway", Arial, Tahoma, sans-serif;
+}
+
+
+.personalData {
+    position: relative;
+    height: 40px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid #27c7ab;
+    margin-right: 47px ;
+}
+
+#check label{
+    font-size: 20px;
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+.personalData:after {
+    content: "";
+    width: 47px;
+    height: 48px;
+    position: absolute;
+    border: 1px solid #27c7ab;
+    background-color:white;
+    top: 0;
+    left: 0;
+}
+.personalData:checked:after {
+    content: "";
+    width: 47px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("images/form_ok.jpg");
+    background-repeat: no-repeat;
+}
+#dataProtection button {
+    margin: 25px 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+}
+#check {
+    margin-top: 25px;
+}
+#footerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#rightFooterDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footerLinks li {
+    display: inline-block;
+    list-style: none;
+}
+#rightFooterDiv span {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+#footerLinks {
+    padding-right: 10px;
+}
